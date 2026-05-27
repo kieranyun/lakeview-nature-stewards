@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-bark antialiased;
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+@layer components {
+  .container-prose {
+    @apply mx-auto w-full max-w-3xl px-6;
+  }
+  .container-wide {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+}

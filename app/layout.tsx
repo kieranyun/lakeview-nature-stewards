@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lakeview Nature Stewards",
+  title: {
+    default: "Lakeview Nature Stewards",
+    template: "%s · Lakeview Nature Stewards",
+  },
   description:
     "Neighborhood volunteers working with SF Rec & Parks to restore the native coastal-bluff ecosystem of the Lakeview Ashton Mini Park.",
   openGraph: {
@@ -28,7 +33,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className="min-h-dvh flex flex-col">
+        <Header />
+        <main className="overflow-x-clip flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

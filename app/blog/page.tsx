@@ -3,14 +3,14 @@ import Link from "next/link";
 import { ArrowRight, LeafMark } from "@/components/icons";
 import { PageHeader } from "@/components/PageHeader";
 import { isConfigured, listPosts, type BlogPost } from "@/lib/notion";
+import { blog, ctas } from "@/content";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description:
-    "Notes from the hill — workday recaps, plant spotlights, and seasonal observations.",
+  description: blog.header.lede,
 };
 
-export const revalidate = 1800; // re-fetch from Notion every 30 minutes
+export const revalidate = 1800;
 
 export default async function BlogIndex() {
   const configured = isConfigured();
@@ -19,19 +19,16 @@ export default async function BlogIndex() {
   return (
     <>
       <PageHeader
-        eyebrow="Blog"
-        title="Notes from the hill."
-        lede="Workday recaps, plant spotlights, and seasonal observations from the outcrop."
+        eyebrow={blog.header.eyebrow}
+        title={blog.header.title}
+        lede={blog.header.lede}
       />
 
       <section className="container-wide pb-24 md:pb-32">
         {!configured && <NotConfiguredHint />}
 
         {configured && posts.length === 0 && (
-          <p className="text-bark/70 max-w-prose">
-            No posts yet. As soon as the first one is published in Notion,
-            it&rsquo;ll show up here.
-          </p>
+          <p className="text-bark/70 max-w-prose">{blog.empty}</p>
         )}
 
         {posts.length > 0 && (
@@ -56,7 +53,6 @@ function PostCard({ post }: { post: BlogPost }) {
     >
       <div className="aspect-[16/10] bg-gradient-to-br from-moss-100 to-moss-200 flex items-center justify-center text-moss-700/50">
         {post.cover ? (
-          // Notion file URLs are short-lived; ISR re-fetches them well within expiry.
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={post.cover}
@@ -83,7 +79,7 @@ function PostCard({ post }: { post: BlogPost }) {
           </p>
         )}
         <span className="mt-4 inline-flex items-center text-moss-700 font-medium text-sm">
-          Read post
+          {ctas.readPost}
           <ArrowRight className="ml-1.5 h-4 w-4 group-hover:translate-x-1 transition-transform" />
         </span>
       </div>

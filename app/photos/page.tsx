@@ -2,37 +2,34 @@ import type { Metadata } from "next";
 import { LeafMark } from "@/components/icons";
 import { PageHeader } from "@/components/PageHeader";
 import { listPhotos, photosConfigured, type Photo } from "@/lib/notion";
+import { photos } from "@/content";
 
 export const metadata: Metadata = {
   title: "Photos",
-  description:
-    "Photos from stewardship days, wildflower blooms, and foggy summer mornings on the hill.",
+  description: photos.header.lede,
 };
 
 export const revalidate = 1800;
 
 export default async function PhotosPage() {
   const configured = photosConfigured();
-  const photos = configured ? await listPhotos() : [];
+  const list = configured ? await listPhotos() : [];
 
   return (
     <>
       <PageHeader
-        eyebrow="Photos"
-        title="From the hill, through the seasons."
-        lede="A growing collection from stewardship days, spring wildflower blooms, and foggy summer mornings."
+        eyebrow={photos.header.eyebrow}
+        title={photos.header.title}
+        lede={photos.header.lede}
       />
       <section className="container-wide pb-24 md:pb-32">
         {!configured && <NotConfiguredHint />}
 
-        {configured && photos.length === 0 && (
-          <p className="text-bark/70 max-w-prose">
-            No photos yet. Upload some in the Notion Photos database and
-            they&rsquo;ll show up here.
-          </p>
+        {configured && list.length === 0 && (
+          <p className="text-bark/70 max-w-prose">{photos.empty}</p>
         )}
 
-        {photos.length > 0 && <Gallery photos={photos} />}
+        {list.length > 0 && <Gallery photos={list} />}
       </section>
     </>
   );

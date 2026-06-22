@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ArrowRight } from "@/components/icons";
 import { getPost, isConfigured, listPosts } from "@/lib/notion";
+import { blog, ctas } from "@/content";
 
 export const revalidate = 1800;
 
@@ -64,7 +65,7 @@ export default async function BlogPostPage({
           className="text-sm text-moss-700 hover:text-moss-900 font-medium inline-flex items-center"
         >
           <ArrowRight className="mr-1.5 h-4 w-4 rotate-180" />
-          All posts
+          {ctas.allPosts}
         </Link>
         <h1 className="mt-6 font-serif text-4xl md:text-6xl leading-tight text-moss-900">
           {post.title}
@@ -81,7 +82,7 @@ export default async function BlogPostPage({
       <div className="container-prose pb-24 md:pb-32">
         <div className="prose prose-lg prose-stone max-w-none prose-headings:font-serif prose-headings:text-moss-900 prose-a:text-moss-700 hover:prose-a:text-moss-900 prose-strong:text-moss-900 prose-blockquote:border-moss-300 prose-blockquote:text-bark/80">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            {post.markdown || "*This post has no body content yet.*"}
+            {post.markdown || blog.missingBody}
           </ReactMarkdown>
         </div>
       </div>

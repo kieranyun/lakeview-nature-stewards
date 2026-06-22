@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LeafMark } from "./icons";
+import { ctas, site } from "@/content";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -22,10 +23,10 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2 group shrink-0">
           <LeafMark className="h-7 w-7 text-moss-600 transition-transform group-hover:rotate-[-6deg]" />
           <span className="font-serif text-lg font-semibold text-moss-800 hidden sm:inline">
-            Lakeview Nature Stewards
+            {site.name}
           </span>
           <span className="font-serif text-lg font-semibold text-moss-800 sm:hidden">
-            LNS
+            {site.shortName}
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-7 text-sm text-bark/80">
@@ -54,7 +55,7 @@ export function Header() {
           href="/contact"
           className="hidden sm:inline-flex items-center rounded-full bg-moss-700 px-4 py-2 text-sm font-medium text-cream shadow-sm hover:bg-moss-800 transition-colors"
         >
-          Get involved
+          {ctas.getInvolved}
         </Link>
       </div>
       <MobileNav pathname={pathname} />

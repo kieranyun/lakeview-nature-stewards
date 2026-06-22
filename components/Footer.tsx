@@ -1,4 +1,5 @@
 import { LeafMark } from "./icons";
+import { site } from "@/content";
 
 export function Footer() {
   return (
@@ -7,14 +8,10 @@ export function Footer() {
         <div className="flex items-center gap-2">
           <LeafMark className="h-5 w-5 text-moss-600" />
           <span>
-            &copy; {new Date().getFullYear()} Lakeview Nature Stewards &middot;
-            San Francisco
+            &copy; {new Date().getFullYear()} {site.copyrightSuffix}
           </span>
         </div>
-        <div>
-          In partnership with SF Recreation &amp; Parks, Natural Resources
-          Division.
-        </div>
+        <div>{site.partnerLine}</div>
       </div>
     </footer>
   );

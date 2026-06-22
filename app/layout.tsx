@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { site } from "@/content";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Lakeview Nature Stewards",
-    template: "%s · Lakeview Nature Stewards",
+    default: site.name,
+    template: `%s · ${site.name}`,
   },
-  description:
-    "Neighborhood volunteers working with SF Rec & Parks to restore the native coastal-bluff ecosystem of the Lakeview Ashton Mini Park.",
+  description: site.description,
   openGraph: {
-    title: "Lakeview Nature Stewards",
-    description:
-      "Restoring the native coastal-bluff ecosystem of the Lakeview Ashton Mini Park in San Francisco.",
+    title: site.name,
+    description: site.ogTagline,
     type: "website",
   },
 };

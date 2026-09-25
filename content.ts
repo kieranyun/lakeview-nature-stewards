@@ -5,7 +5,7 @@ export const site = {
   name: "Lakeview Nature Stewards",
   shortName: "LNS",
   description:
-    "Neighborhood volunteers working with SF Rec & Parks to restore the native coastal-bluff ecosystem of the Lakeview Ashton Mini Park.",
+    "Neighborhood volunteers working with SF Rec & Parks to fix the native coastal-bluff ecosystem of the Lakeview Ashton Mini Park.",
   ogTagline:
     "Restoring the native coastal-bluff ecosystem of the Lakeview Ashton Mini Park in San Francisco.",
   email: "Lakeviewnaturestewards@gmail.com",

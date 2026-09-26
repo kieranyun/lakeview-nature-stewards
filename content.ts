@@ -32,8 +32,9 @@ const missionAspiration = {
   eyebrow: "Our aspiration",
   heading: "To bring back the ecosystem that lived here 250 years ago.",
   paragraphs: [
-    "We envision a rocky hilltop full of native plants and animals — lots of birds and pollinators. A place where you can watch the seasons turn from our wet winters, to springs bursting with wildflowers and green native grasses.",
-    "Then a foggy summer arrives, the spring flowers dry into seed heads that feed and shelter birds (maybe even quail, one day). It's a long road, but it begins with the small patch of hill in front of us.",
+    "We envision a rocky hilltop full of native plants and animals — lots of birds and pollinators. A place where you can watch the seasons turn. The wet rainy winters turn to springs bursting with wildflowers and green native grasses.",
+    "When the foggy summer arrives, the spring flowers dry into seed heads that feed and shelter birds (maybe even quail, one day). 
+    It's a long road to bring the hill back to the fullness that it was 250 years ago, but it begins with the small patch at a time.",
   ],
 };
 
@@ -78,12 +79,12 @@ export const home = {
 export const about = {
   header: {
     eyebrow: "About",
-    title: "Neighbors, by way of the hill.",
+    title: "Neighbors on the the hill.",
     lede:
       "The Lakeview Nature Stewards is a group of neighborhood volunteers working together with San Francisco Recreation & Parks to foster the ecological health of the area officially called the Lakeview Ashton Mini Park.",
   },
   paragraphs: [
-    "You might also know it as the *Rocky Outcrop*, the *Orizaba Outcrop*, or one of a handful of other names depending on who you ask. Whatever you call it, it's already a wonderful place to sit and take in the view. We're trying to make it even better, for the people who live near it and for the wildlife that depends on it.",
+    "You might also know the hill as the *Rocky Outcrop*, the *Orizaba Outcrop*, or one of a handful of other names depending on who you ask. Whatever you call it, it's already a great place to sit and take in the view. We're trying to make it even better, for the people who live near it and for the wildlife that depends on it.",
   ],
   mission: missionAspiration,
 };
@@ -91,22 +92,23 @@ export const about = {
 export const thePark = {
   header: {
     eyebrow: "The Park",
-    title: "A designated Natural Area in the middle of the city.",
+    title: "A designated Natural Area our neighborhood.",
     lede:
       "The hill is a rare remnant of San Francisco's coastal-bluff ecosystem — and the city has flagged it as a place worth protecting.",
   },
   paragraphs: [
     "The hill has been specially designated a **Natural Area** by the SF Rec & Park *Natural Resources Division* — meaning the city has flagged it as a place whose natural resources are a priority to protect.",
     "What makes it valuable is what survives here: remnant patches of coastal-bluff ecosystem that have hung on for millennia even as the city grew up around them.",
-    "Why have these native plants held on? The answer is the thin, rocky soil that faces directly into the wind off the Pacific. Natives have been here for hundreds of thousands of years and have evolved to survive these gnarly conditions — deep roots that pull moisture and nutrients from far below long after the topsoil has dried.",
-    "Where the soil has a little more give, invasive annual grasses move in and crowd out the originals. Native plants are tough, but not invincible. That's where we come in.",
+    "Why have these native plants held on and not been outcompeted by invasive annual grasses and other weeds? The answer is the thin, rocky soil that faces directly into the wind off the Pacific. Native plants have been here for thousands of years and have evolved to survive these gnarly conditions. They have deep roots bringing in and storing moisture and nutrients from far below even after the rains have stopped and the topsoil has dried out.",
+    "In parts of the park where the soil is a little deeper and the conditions less harsh, invasive annual grasses can move in and crowd out the originals. Native plants are tough, but not invincible. That's where we come in.
+    "Lakeview Nature Stewards organizes several workdays each year in collaboration with SF Rec & Parks.  In fall, winter and spring, we clean up the area, pull weeds, put in new plants and seeds, and water new plants to help them get established.  We welcome your help at any of these workdays,
   ],
   nativePlants: {
     eyebrow: "Why native plants",
     heading: "A web of life, built over thousands of years.",
     paragraphs: [
       "Wildlife has evolved alongside specific plants — a complex web that provides pollen, insects, seeds, cover, and places to nest and raise young.",
-      "Many invasive plants simply don't offer those things to the insects, birds, and other animals that would otherwise live here. Lose the plants and, eventually, you lose everything that depended on them.",
+      "Many invasive plants simply don't offer these life necesssities to the insects, birds, and other animals that would otherwise live here. Lose the plants and, eventually, you lose everything that depended on them.",
       "*(We'll add specific examples soon — like the hairstreak butterflies that rely on particular host plants found right here on the outcrop.)*",
     ],
   },

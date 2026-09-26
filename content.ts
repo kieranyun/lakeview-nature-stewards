@@ -33,8 +33,8 @@ const missionAspiration = {
   heading: "To bring back the ecosystem that lived here 250 years ago.",
   paragraphs: [
     "We envision a rocky hilltop full of native plants and animals — lots of birds and pollinators. A place where you can watch the seasons turn. The wet rainy winters turn to springs bursting with wildflowers and green native grasses.",
-    "When the foggy summer arrives, the spring flowers dry into seed heads that feed and shelter birds (maybe even quail, one day). 
-    It's a long road to bring the hill back to the fullness that it was 250 years ago, but it begins with the small patch at a time.",
+    `When the foggy summer arrives, the spring flowers dry into seed heads that feed and shelter birds (maybe even quail, one day). 
+    It's a long road to bring the hill back to the fullness that it was 250 years ago, but it begins with the small patch at a time.`,
   ],
 };
 
@@ -100,8 +100,8 @@ export const thePark = {
     "The hill has been specially designated a **Natural Area** by the SF Rec & Park *Natural Resources Division* — meaning the city has flagged it as a place whose natural resources are a priority to protect.",
     "What makes it valuable is what survives here: remnant patches of coastal-bluff ecosystem that have hung on for millennia even as the city grew up around them.",
     "Why have these native plants held on and not been outcompeted by invasive annual grasses and other weeds? The answer is the thin, rocky soil that faces directly into the wind off the Pacific. Native plants have been here for thousands of years and have evolved to survive these gnarly conditions. They have deep roots bringing in and storing moisture and nutrients from far below even after the rains have stopped and the topsoil has dried out.",
-    "In parts of the park where the soil is a little deeper and the conditions less harsh, invasive annual grasses can move in and crowd out the originals. Native plants are tough, but not invincible. That's where we come in.
-    "Lakeview Nature Stewards organizes several workdays each year in collaboration with SF Rec & Parks.  In fall, winter and spring, we clean up the area, pull weeds, put in new plants and seeds, and water new plants to help them get established.  We welcome your help at any of these workdays,
+    "In parts of the park where the soil is a little deeper and the conditions less harsh, invasive annual grasses can move in and crowd out the originals. Native plants are tough, but not invincible. That's where we come in.",
+    "Lakeview Nature Stewards organizes several workdays each year in collaboration with SF Rec & Parks.  In fall, winter and spring, we clean up the area, pull weeds, put in new plants and seeds, and water new plants to help them get established.  We welcome your help at any of these workdays",
   ],
   nativePlants: {
     eyebrow: "Why native plants",
